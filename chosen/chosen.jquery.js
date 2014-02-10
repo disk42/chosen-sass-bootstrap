@@ -741,7 +741,7 @@ Copyright (c) 2011 by Harvest
           this.selected_item.find("span").first().text(item.text);
           if (this.allow_single_deselect) this.single_deselect_control_build();
         }
-        if (!(evt.metaKey && this.is_multiple)) this.results_hide();
+        if (!((evt.metaKey || evt.ctrlKey) && this.is_multiple)) this.results_hide();
         this.search_field.val("");
         if (this.is_multiple || this.form_field_jq.val() !== this.current_value) {
           this.form_field_jq.trigger("change", {
