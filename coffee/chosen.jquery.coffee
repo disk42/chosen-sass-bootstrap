@@ -35,7 +35,7 @@ class Chosen extends AbstractChosen
     container_div = ($ "<div />", {
       id: @container_id
       class: "chzn-container#{ if @is_rtl then ' chzn-rtl' else '' }"
-      style: 'width: ' + (@f_width) + 'px;' #use parens around @f_width so coffeescript doesn't think + ' px' is a function parameter
+      style: 'width: 100%;' #use parens around @f_width so coffeescript doesn't think + ' px' is a function parameter
     })
 
     if @is_multiple
